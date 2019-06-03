@@ -6,13 +6,27 @@
 /*
  * Your customer ViewModel code goes here
  */
-define([],
- function() {
+define(['ojs/ojcore', 'ojs/ojmodel', 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'],
+ function(oj, Model) {
 
     function CustomerViewModel() {
       var self = this;
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
+	self.url = '/greet/employees';
+
+	self.collection = new oj.Collection(null, {
+	    model: new oj.Model.extend({
+		idAttribute: 'id',
+		urlRoot: self.url}),
+	    url: self.url
+	});
+
+	self.dataSource = new oj.CollectionDataGridDataSource(
+	   self.collection, {
+	      rowHeader: 'id',
+	      columns: ['FIRST_NAME', 'LAST_NAME', 'HIRE_DATE', 'SALARY']
+	});
 
       /**
        * Optional ViewModel method invoked after the View is inserted into the
