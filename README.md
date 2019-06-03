@@ -1,7 +1,7 @@
 
 # Helidon Quickstart MP Example
 
-This example implements a simple Hello World REST service using MicroProfile
+This example implements integrationg of Helidon MP and Oralce JET.
 
 ## Prerequisites
 
