@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
       - name: helidon-jet
-        image: nrt.ocir.io/orasejapan/xczhang/helidon-jet:1.0
+        image: helidon-jet:1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

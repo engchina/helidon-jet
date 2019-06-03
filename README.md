@@ -70,13 +70,13 @@ curl -H 'Accept: application/json' -X GET http://localhost:8080/metrics
 ## Build the Docker Image
 
 ```
-docker build -t nrt.ocir.io/orasejapan/xczhang/helidon-jet:1.0 .
+docker build -t helidon-jet:1.0 .
 ```
 
 ## Start the application with Docker
 
 ```
-docker run --rm -p 8080:8080 nrt.ocir.io/orasejapan/xczhang/helidon-jet:1.0
+docker run --rm -p 8080:8080 helidon-jet:1.0
 ```
 
 Exercise the application as described above
