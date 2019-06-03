@@ -6,13 +6,18 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define([],
- function() {
+define(['ojs/ojcore', 'knockout', 'text!../resources/basicData.json', 'ojs/ojarraydataprovider', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojchart'],
+ function(oj, ko, data, ArrayDataProvider, $) {
 
     function DashboardViewModel() {
       var self = this;
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
+      self.val = ko.observable("pie");
+      
+      self.stackValue = ko.observable('off');
+      self.orientationValue = ko.observable('vertical');
+      self.dataProvider = new ArrayDataProvider(JSON.parse(data), {keyAttributes: 'id'});
 
       /**
        * Optional ViewModel method invoked after the View is inserted into the

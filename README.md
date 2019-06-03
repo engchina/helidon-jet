@@ -21,6 +21,14 @@ minikube version
 kubectl version --short
 ```
 
+## JET Build
+
+```
+cd src/main/resources/WEB
+ojet build
+cd -
+```
+
 ## Build
 
 ```
